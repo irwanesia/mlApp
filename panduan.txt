@@ -1,0 +1,21 @@
+# download dan jalankan perintah dibawah
+curl https://repo.anaconda.com/miniconda/Miniconda3-latest-Windows-x86_64.exe -o miniconda.exe
+start /wait "" .\miniconda.exe /S
+del miniconda.exe
+# install miniconda3
+buat folder mlapp
+buat venv
+python -m venv venv
+# buka anaconda prompt atau buka di cmd windows dengan mengatur terlebih dahulu PATH nya
+- system properties
+- environment variables
+create conda
+create conda -n ml python=3.9
+conda init
+conda activate ml
+conda install streamlit
+conda install numpy pandas
+conda install matplotlib scikit-learn
+ipython kernel install --user --name=ml
+# jalankan jupyter notebook (web server)
+jupyter notebook
